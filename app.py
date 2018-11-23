@@ -7,6 +7,11 @@ app = Flask(__name__)
 saborInput = 1
 porcionInput = 1
 
+
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
 @app.route('/')
 def index():
 	return render_template('index.html')
